@@ -15,8 +15,5 @@ class Aturan extends Model {
                     ->get();
         
     }
-    public static function fod(){
-        return Gangguan::where('id' ,'>' ,0)->pluck('id')->toArray();
-    }
     
 }

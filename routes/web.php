@@ -15,10 +15,7 @@
 //     return $router->app->version();
 // });
 
-$router->group(['middleware'=>'cors'], function() use ($router){
-    $router->get('/gejala','GejalaController@getGejala');
-    $router->get('/identifikasi','GejalaController@identifikasi');
-    $router->get('/testing',function(){
-        return 'hello';
-    });
+$router->group(['middleware' => 'cors'], function () use ($router) {
+    $router->get('/identifikasi', 'GangguanController@index');
+    $router->get('/gejala', 'GejalaController@index');
 });
